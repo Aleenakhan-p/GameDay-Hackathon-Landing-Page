@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS GameDay 2026 – BZU Student Builders Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <!-- <svg class="logo-svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <polygon points="18,2 34,11 34,25 18,34 2,25 2,11" stroke="#FF9900" stroke-width="1.8" fill="none"/>
+        <line x1="18" y1="2"  x2="18" y2="34" stroke="#FF9900" stroke-width="1.2" opacity=".5"/>
+        <line x1="2"  y1="11" x2="34" y2="25" stroke="#FF9900" stroke-width="1.2" opacity=".5"/>
+        <line x1="34" y1="11" x2="2"  y2="25" stroke="#FF9900" stroke-width="1.2" opacity=".5"/>
+        <circle cx="18" cy="18" r="3" fill="#FF9900"/>
+      </svg> -->
+      <div>
+        <div style="width: 3rem;"><img src="images/logo.png" alt="AWS SBG BZU Logo"></div>
+        <div class="logo-main">AWS SBG BZU</div>
+        <div class="logo-sub">GameDay 2026</div>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#build">What You'll Build</a></li>
+      <li><a href="#services">AWS Services</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#register" class="btn-primary btn-nav">Register Team</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+  <div class="hero-glow glow-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      AWS Student Builder Group BZU, Multan 
+    </div>
+    <h1 class="hero-headline">
+       <span class="gradient-text">Presents</span><br/>
+      1st Ever<br/>
+      <span class="gradient-text">AWS GameDay</span><br/>
+      in Multan
+    </h1>
+    <p class="hero-sub">
+      Join students from universities across Southern Punjab for a real-world
+      AWS cloud architecture challenge. Build, deploy, and compete on AWS.
+    </p>
+    <div class="hero-actions">
+      <a href="#register" class="btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Register Team
+      </a>
+      <a href="#about" class="btn-ghost btn-lg">
+        Learn More
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">200<span>+</span></div>
+        <div class="stat-label">Participants</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Universities</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">4<span>–6</span></div>
+        <div class="stat-label">Team Based</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-label">AWS Challenges</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-arch">
+    <div class="arch-diagram" id="archDiagram">
+      <div class="arch-node node-center" data-label="VPC">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 3v18M16 3v18M2 9h20M2 15h20"/></svg>
+      </div>
+      <div class="arch-node node-1" data-label="EC2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+      </div>
+      <div class="arch-node node-2" data-label="S3">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><ellipse cx="12" cy="7" rx="8" ry="3"/><path d="M4 7v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+      </div>
+      <div class="arch-node node-3" data-label="Lambda">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
+      </div>
+      <div class="arch-node node-4" data-label="RDS">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg>
+      </div>
+      <div class="arch-node node-5" data-label="CloudFront">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <svg class="arch-lines" id="archLines"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ ABOUT ═════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-badge">About the Event</div>
+    <h2 class="section-title">What is <span class="gradient-text">AWS GameDay?</span></h2>
+    <p class="section-sub">An immersive team-based learning experience where you solve real-world cloud challenges under time pressure using live AWS environments.</p>
+
+    <div class="about-grid">
+      <div class="glass-card about-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Real AWS Environment</h3>
+        <p>Each team gets a live AWS account with real services, real costs, and real consequences — just like production.</p>
+      </div>
+      <div class="glass-card about-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        </div>
+        <h3>Team Competition</h3>
+        <p>Compete as a team of 3–5 members, collaborating on architecture decisions under competitive pressure.</p>
+      </div>
+      <div class="glass-card about-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Hands-On Learning</h3>
+        <p>No slides, no theory. Solve challenges by building and deploying actual cloud infrastructure on AWS.</p>
+      </div>
+      <div class="glass-card about-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Win Prizes & Recognition</h3>
+        <p>Top teams win AWS credits, swag, certificates, and recognition from the AWS community in Pakistan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TIMELINE ═══════════════════════════════ -->
+<section class="section section-alt" id="timeline">
+  <div class="container">
+    <div class="section-badge">Event Schedule</div>
+    <h2 class="section-title">Event <span class="gradient-text">Timeline</span></h2>
+    <p class="section-sub">Everything you need to know about the day of the competition.</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">08:30 PM - 11:00 PM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Commencement, 29th June, 2026</div>
+          <h4>Kick-off & Welcome</h4>
+          <p>Get to know the guidelines for the upcoming Hackathon.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">11:00 AM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Check-In, 6th July, 2026</div>
+          <h4>Welcome</h4>
+          <p>Team check-in, badge collection, and networking with fellow cloud builders from across Southern Punjab.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">12:00 PM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Opening</div>
+          <h4>Keynote & Rules Briefing</h4>
+          <p>Opening keynote, GameDay rules walkthrough, AWS environment setup, and team introductions.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot tl-dot-active"></div>
+        <div class="tl-time">01:00 PM</div>
+        <div class="glass-card tl-card tl-card-active">
+          <div class="tl-tag tl-tag-active">Competition</div>
+          <h4>🔥 GameDay Begins</h4>
+          <p>Challenges unlock! Teams start solving architecture problems in their live AWS environments. The clock is ticking.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">03:30 PM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Break</div>
+          <h4>Lunch & Networking</h4>
+          <p>Refuel and network. Mentors from AWS and industry professionals will be available for Q&amp;A.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">04:30 PM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Round 2</div>
+          <h4>Advanced Challenges Unlock</h4>
+          <p>Harder, higher-point challenges go live. Teams must optimize, scale, and secure their architectures.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">06:00 PM</div>
+        <div class="glass-card tl-card">
+          <div class="tl-tag">Closing</div>
+          <h4>Results & Award Ceremony</h4>
+          <p>Leaderboard reveal, winner announcements, prizes distribution, and closing remarks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ WHAT YOU'LL BUILD ══════════════════════ -->
+<section class="section" id="build">
+  <div class="container">
+    <div class="section-badge">The Challenge</div>
+    <h2 class="section-title">What You'll <span class="gradient-text">Build</span></h2>
+    <p class="section-sub">Tackle production-grade cloud architecture problems across multiple domains.</p>
+
+    <div class="build-grid">
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Serverless Applications</h3>
+        <p>Design and deploy serverless architectures using Lambda, API Gateway, and DynamoDB for high-scale, low-cost apps.</p>
+        <div class="build-tags">
+          <span>Lambda</span><span>API Gateway</span><span>DynamoDB</span>
+        </div>
+      </div>
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Security & IAM</h3>
+        <p>Lock down cloud environments, configure least-privilege access, and detect security vulnerabilities using AWS security services.</p>
+        <div class="build-tags">
+          <span>IAM</span><span>GuardDuty</span><span>Security Hub</span>
+        </div>
+      </div>
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg>
+        </div>
+        <h3>Data & Analytics</h3>
+        <p>Build data pipelines, query massive datasets, and create real-time analytics dashboards on AWS data services.</p>
+        <div class="build-tags">
+          <span>S3</span><span>Athena</span><span>Glue</span>
+        </div>
+      </div>
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3>Container Workloads</h3>
+        <p>Containerize applications, deploy to ECS or EKS, and manage microservices architectures at scale.</p>
+        <div class="build-tags">
+          <span>ECS</span><span>ECR</span><span>Fargate</span>
+        </div>
+      </div>
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Monitoring & Observability</h3>
+        <p>Instrument applications with CloudWatch, set up alarms, and build operational dashboards for production systems.</p>
+        <div class="build-tags">
+          <span>CloudWatch</span><span>X-Ray</span><span>SNS</span>
+        </div>
+      </div>
+      <div class="glass-card build-card">
+        <div class="build-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Global Content Delivery</h3>
+        <p>Optimize performance with CloudFront CDN, Route 53 routing policies, and global load balancing strategies.</p>
+        <div class="build-tags">
+          <span>CloudFront</span><span>Route 53</span><span>ELB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════ WORKFLOW ════════════════════════════════ -->
+<section class="section section-alt" id="workflow">
+  <div class="container">
+    <div class="section-badge">How It Works</div>
+    <h2 class="section-title">Competition <span class="gradient-text">Workflow</span></h2>
+    <p class="section-sub">From registration to the winner's podium — here's exactly how the day unfolds.</p>
+
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="step-num">01</div>
+        <div class="glass-card step-card">
+          <h4>Form Your Team</h4>
+          <p>Register a team of 3–5 students from any university in Southern Punjab. Mix skills — cloud, dev, security.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow">
+        <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l6 6-6 6" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="workflow-step">
+        <div class="step-num">02</div>
+        <div class="glass-card step-card">
+          <h4>Get Your AWS Sandbox</h4>
+          <p>On game day, each team receives a dedicated AWS account with a starting budget and full service access.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow">
+        <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l6 6-6 6" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="workflow-step">
+        <div class="step-num">03</div>
+        <div class="glass-card step-card">
+          <h4>Solve Challenges</h4>
+          <p>Challenges unlock progressively. Each solved challenge earns points. Teams see a live leaderboard throughout.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow">
+        <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l6 6-6 6" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="workflow-step">
+        <div class="step-num">04</div>
+        <div class="glass-card step-card">
+          <h4>Win & Get Recognized</h4>
+          <p>Top 3 teams win prizes, AWS credits, and certificates. All participants receive a completion certificate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ AWS SERVICES ═════════════════════════════ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-badge">Tech Stack</div>
+    <h2 class="section-title">AWS Services <span class="gradient-text">You'll Use</span></h2>
+    <p class="section-sub">Get hands-on with the same services used by companies serving millions of users.</p>
+
+    <div class="services-grid">
+      <div class="service-pill"><span class="pill-dot"></span>Amazon EC2</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon S3</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS Lambda</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon RDS</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon DynamoDB</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon VPC</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon CloudFront</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS IAM</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon ECS</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS Fargate</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon SQS</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon SNS</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon CloudWatch</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS X-Ray</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon Route 53</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS GuardDuty</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS Athena</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS Glue</div>
+      <div class="service-pill"><span class="pill-dot"></span>Amazon Bedrock</div>
+      <div class="service-pill"><span class="pill-dot"></span>AWS CDK</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ HIGHLIGHTS ══════════════════════════════ -->
+<section class="section section-alt" id="highlights">
+  <div class="container">
+    <div class="section-badge">Why Attend</div>
+    <h2 class="section-title">Event <span class="gradient-text">Highlights</span></h2>
+    <p class="section-sub">More than just a competition — a full-day cloud immersion experience.</p>
+
+    <div class="highlights-grid">
+      <div class="glass-card highlight-card highlight-featured">
+        <div class="hl-icon">🏆</div>
+        <h3>Prize Pool</h3>
+        <p>Exciting prizes including AWS credits, premium swag, certificates, and recognition in the AWS Pakistan community.</p>
+      </div>
+      <div class="glass-card highlight-card">
+        <div class="hl-icon">🎓</div>
+        <h3>Free AWS Training</h3>
+        <p>All participants get access to curated AWS Skill Builder courses before the event to help them prepare.</p>
+      </div>
+      <div class="glass-card highlight-card">
+        <div class="hl-icon">🤝</div>
+        <h3>Mentors & Experts</h3>
+        <p>AWS-certified professionals and industry mentors will be on the floor to guide and inspire teams.</p>
+      </div>
+      <div class="glass-card highlight-card">
+        <div class="hl-icon">🌐</div>
+        <h3>Network Building</h3>
+        <p>Connect with students, professionals, and the growing AWS cloud community across Pakistan.</p>
+      </div>
+      <div class="glass-card highlight-card">
+        <div class="hl-icon">📜</div>
+        <h3>Certificates for All</h3>
+        <p>Every participant receives an official AWS Student Builders Group participation certificate.</p>
+      </div>
+      <div class="glass-card highlight-card">
+        <div class="hl-icon">☁️</div>
+        <h3>Live AWS Sandbox</h3>
+        <p>Experience a real AWS environment — no simulators, no emulators. Real cloud. Real stakes. Real learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FAQ ════════════════════════════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-badge">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+    <p class="section-sub">Everything you need to know before signing up.</p>
+
+    <div class="faq-list">
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          Do I need prior AWS experience to participate?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>No prior AWS experience is required, but basic familiarity with cloud concepts will help. We recommend completing a few free AWS Skill Builder modules before the event. Beginners are welcome!</p>
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          How many members can be on a team?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Teams must have 3 to 5 members. All members must be currently enrolled students. You can register with members from the same university or form an inter-university team.</p>
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          Is there a registration fee?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>The event is completely free for all registered student teams. You only need to bring your laptop and student ID. Lunch and refreshments will be provided.</p>
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          What should I bring on the day?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Bring your laptop (charger too), a valid student ID, and your team spirit. AWS accounts will be provisioned for each team on the day — you don't need to create one beforehand.</p>
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          Which universities can participate?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>The event is open to students from all universities in Southern Punjab including BZU, KFUEIT, NFC, IUB, GCU Sahiwal, USKT, and more. If your university isn't listed, you can still register — just include your university name during registration.</p>
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <button class="faq-q" aria-expanded="false">
+          Will there be prizes for runner-up teams?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Yes! The top 3 teams will receive prizes. The 1st place team gets the grand prize including AWS credits and premium swag. All participants receive a completion certificate and event swag.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ CTA ════════════════════════════════════ -->
+<section class="section cta-section" id="register">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <div class="cta-inner glass-card">
+      <div class="section-badge">Limited Spots</div>
+      <h2 class="section-title">Ready to Build on <span class="gradient-text">AWS?</span></h2>
+      <p class="section-sub">Registrations are open. Secure your team's spot before seats fill up. This is your chance to be part of the first ever AWS GameDay in Multan.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn-primary btn-xl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Register Your Team Now
+        </a>
+        <a href="https://beacons.ai/awssbgbzu" class="btn-ghost btn-xl">Contact Organizers</a>
+      </div>
+      <p class="cta-note">Free event · Open to all Southern Punjab universities · 200+ seats</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FOOTER ═════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div>
+          <div style="width: 3rem;"><img src="images/logo.png" alt="AWS SBG BZU Logo"></div>
+          <div class="logo-main">AWS Student Builder Groups</div>
+          <div class="logo-sub">Bahauddin Zakariya University, Multan</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Event</h5>
+          <a href="#about">About GameDay</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#build">Challenges</a>
+          <a href="#highlights">Highlights</a>
+        </div>
+        <div class="footer-col">
+          <h5>Info</h5>
+          <a href="#services">AWS Services</a>
+          <a href="#workflow">How It Works</a>
+          <a href="#faq">FAQ</a>
+          <a href="#register">Register</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://www.linkedin.com/company/aws-cloud-club-bzu-multan">LinkedIn</a>
+          <a href="https://www.instagram.com/aws_sbg_bzu">Instagram</a>
+          <a href="https://www.meetup.com/aws-sbg-at-bahauddinzakariya-univ-multan/">Meetup</a>
+          <a href="mailto:awsstudentbuildergroupsbzu@gmail.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AWS Student Builder Groups BZU Multan. All rights reserved.</p>
+      <p>Organized by students, for students. Not officially affiliated with Amazon Web Services, Inc.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
