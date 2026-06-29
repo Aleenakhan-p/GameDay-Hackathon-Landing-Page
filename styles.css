@@ -233,7 +233,7 @@ img { max-width: 100%; }
   padding: 6px;
   margin-left: auto;
   position: relative;
-  z-index: 1001;
+  z-index: 10000;
 }
 .hamburger span {
   display: block;
@@ -810,15 +810,25 @@ img { max-width: 100%; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    inset: 0;
-    background: rgba(9,14,26,.97);
-    backdrop-filter: blur(20px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(9,14,26,.98);
     align-items: center;
     justify-content: center;
-    gap: 24px;
-    z-index: 999;
+    gap: 28px;
+    z-index: 9999;
+    overflow-y: auto;
   }
-  .nav-links.open a { font-size: 1.4rem; }
+  .nav-links.open a {
+    font-size: 1.4rem;
+    color: #e8eaf0;
+    padding: 8px 24px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 
   .hero { padding: 100px 0 60px; }
   .hero-stats {
